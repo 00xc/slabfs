@@ -1,0 +1,18 @@
+[package]
+name = "slabfs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bitflags = "2.3.2"
+env_logger = { version = "0.10.0", features = ["humantime"], default-features = false }
+fastcmp = "1.0.1"
+fuse-backend-rs = "0.10.4"
+libc = "0.2.146"
+log = "0.4.19"
+slab = "0.4.8"
+
+[profile.release]
+debug = true
+#debug = false
+lto = true
